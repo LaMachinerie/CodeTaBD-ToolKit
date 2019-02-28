@@ -1,0 +1,56 @@
+{
+    "break": {
+        "key": "break",
+        "id": "0",
+        "displayName": "est assise avec son café",
+        "filename": "break.png"
+    },
+    "drinking_coffee": {
+        "key": "drinking_coffee",
+        "id": "1",
+        "displayName": "boit son café",
+        "filename": "drinking_coffee.png"
+    },
+    "hunting": {
+        "key": "hunting",
+        "id": "2",
+        "displayName": "chasse le chat",
+        "filename": "hunting.png"
+    },
+    "placing_left": {
+        "key": "placing_left",
+        "id": "3",
+        "displayName": "recouvre le café de papa",
+        "filename": "placing_left.png"
+    },
+    "placing_right": {
+        "key": "placing_right",
+        "id": "4",
+        "displayName": "recouvre son café",
+        "filename": "placing_right.png"
+    },
+    "sitting": {
+        "key": "sitting",
+        "id": "5",
+        "displayName": "est assise sur le lit",
+        "filename": "sitting.png"
+    },
+    "taking_coffee": {
+        "key": "taking_coffee",
+        "id": "6",
+        "displayName": "attrape son café",
+        "filename": "taking_coffee.png"
+    },
+    "unwear": {
+        "key": "unwear",
+        "id": "7",
+        "displayName": "enlève sa robe",
+        "filename": "unwear.png"
+    },
+    "wear": {
+        "key": "wear",
+        "id": "8",
+        "displayName": "met son pyjama",
+        "filename": "wear.png"
+    }
+}

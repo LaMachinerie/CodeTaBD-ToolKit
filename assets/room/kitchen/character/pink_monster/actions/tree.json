@@ -1,0 +1,14 @@
+{
+    "get_out": {
+        "key": "get_out",
+        "id": "0",
+        "displayName": "sort de la cave",
+        "filename": "get_out.png"
+    },
+    "watch": {
+        "key": "watch",
+        "id": "1",
+        "displayName": "observe l'escalier",
+        "filename": "watch.png"
+    }
+}

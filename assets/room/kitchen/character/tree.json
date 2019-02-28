@@ -1,0 +1,44 @@
+{
+    "cat": {
+        "key": "cat",
+        "id": "0",
+        "displayName": "le chat",
+        "actions": {}
+    },
+    "green_monster": {
+        "key": "green_monster",
+        "id": "1",
+        "displayName": "le monstre vert",
+        "actions": {}
+    },
+    "kid": {
+        "key": "kid",
+        "id": "2",
+        "displayName": "l'enfant",
+        "actions": {}
+    },
+    "maman": {
+        "key": "maman",
+        "id": "3",
+        "displayName": "la maman",
+        "actions": {}
+    },
+    "mouse": {
+        "key": "mouse",
+        "id": "4",
+        "displayName": "la/les souris",
+        "actions": {}
+    },
+    "papa": {
+        "key": "papa",
+        "id": "5",
+        "displayName": "le papa",
+        "actions": {}
+    },
+    "pink_monster": {
+        "key": "pink_monster",
+        "id": "6",
+        "displayName": "le monstre rose",
+        "actions": {}
+    }
+}

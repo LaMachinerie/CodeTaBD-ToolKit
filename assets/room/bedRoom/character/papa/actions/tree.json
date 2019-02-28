@@ -1,0 +1,14 @@
+{
+    "wake_up": {
+        "key": "wake_up",
+        "id": "0",
+        "displayName": "s'étire",
+        "filename": "wake_up.png"
+    },
+    "unwear": {
+        "key": "unwear",
+        "id": "1",
+        "displayName": "enlève sa chemise",
+        "filename": "unwear.png"
+    }
+}

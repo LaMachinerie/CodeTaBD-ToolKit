@@ -1,0 +1,38 @@
+{
+    "call": {
+        "key": "call",
+        "id": "0",
+        "displayName": "crie dans l'escalier",
+        "filename": "call.png"
+    },
+    "climb1": {
+        "key": "climb1",
+        "id": "1",
+        "displayName": "monte l'escalier",
+        "filename": "climb1.png"
+    },
+    "climb2": {
+        "key": "climb2",
+        "id": "2",
+        "displayName": "monte l'escalier en nuisette",
+        "filename": "climb2.png"
+    },
+    "down1": {
+        "key": "down1",
+        "id": "3",
+        "displayName": "descend l'escalier",
+        "filename": "down1.png"
+    },
+    "down2": {
+        "key": "down2",
+        "id": "4",
+        "displayName": "descend l'escalier",
+        "filename": "down2.png"
+    },
+    "talking": {
+        "key": "talking",
+        "id": "5",
+        "displayName": "parle dans l'escalier",
+        "filename": "talking.png"
+    }
+}

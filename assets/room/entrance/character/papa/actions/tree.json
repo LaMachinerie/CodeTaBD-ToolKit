@@ -1,0 +1,26 @@
+{
+    "climb": {
+        "key": "climb",
+        "id": "0",
+        "displayName": "monte l'escalier",
+        "filename": "climb.png"
+    },
+    "climb2": {
+        "key": "climb2",
+        "id": "1",
+        "displayName": "monte l'escalier",
+        "filename": "climb2.png"
+    },
+    "close": {
+        "key": "close",
+        "id": "2",
+        "displayName": "ferme la porte à clef",
+        "filename": "close.png"
+    },
+    "enter": {
+        "key": "enter",
+        "id": "3",
+        "displayName": "rentre à la maison",
+        "filename": "enter.png"
+    }
+}

@@ -1,2 +1,2 @@
-# CodeTaBD-ToolKit
-Developpement tool for Code ta BD projet
+# CodeTaBD-Toolkit
+Developpment Kit for Code ta BD project

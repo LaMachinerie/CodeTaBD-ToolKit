@@ -1,0 +1,26 @@
+{
+  "name": "CodeTaBD-ToolKit",
+  "version": "1.0.0",
+  "description": "Development ToolKit for Code Ta BD project",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/LaMachinerie/CodeTaBD-ToolKit",
+  "keywords": [
+    "Electron",
+    "Coding",
+    "Cartoon",
+    "Sprite",
+    "animation"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^4.0.4"
+  },
+  "dependencies": {
+    "archiver": "^3.0.0",
+    "decompress-zip": "^0.2.2"
+  }
+}

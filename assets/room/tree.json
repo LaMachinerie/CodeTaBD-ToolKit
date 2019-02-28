@@ -1,0 +1,32 @@
+{
+    "bedRoom": {
+        "key": "bedRoom",
+        "id": "0",
+        "displayName": "la chambre des parents"
+    },
+    "entrance": {
+        "key": "entrance",
+        "id": "1",
+        "displayName": "l'entrée"
+    },
+    "kidRoom": {
+        "key": "kidRoom",
+        "id": "2",
+        "displayName": "la chambre de l'enfant"
+    },
+    "kitchen": {
+        "key": "kitchen",
+        "id": "2",
+        "displayName": "la cuisine"
+    },
+    "roof": {
+        "key": "roof",
+        "id": "3",
+        "displayName": "le toît"
+    },
+    "up": {
+        "key": "up",
+        "id": "4",
+        "displayName": "l'étage"
+    }
+}

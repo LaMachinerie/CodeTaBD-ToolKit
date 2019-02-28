@@ -1,0 +1,20 @@
+{
+    "deep_sleep": {
+        "key": "deep_sleep",
+        "id": "0",
+        "displayName": "dort profondément",
+        "filename": "deep_sleep.png"
+    },
+    "sleep": {
+        "key": "sleep",
+        "id": "1",
+        "displayName": "dort",
+        "filename": "sleep.png"
+    },
+    "wash": {
+        "key": "wash",
+        "id": "2",
+        "displayName": "fait sa toilette",
+        "filename": "wash.png"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "day": {
+        "key": "day",
+        "id": "0",
+        "displayName": "jour",
+        "filename": "day.png"
+    },
+	"night": {
+        "key": "night",
+        "id": "1",
+        "displayName": "nuit",
+        "filename": "night.png"
+    }
+}

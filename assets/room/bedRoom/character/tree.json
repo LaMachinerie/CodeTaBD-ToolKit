@@ -1,0 +1,20 @@
+{
+    "papa": {
+        "key": "papa",
+        "id": "0",
+        "displayName": "le papa",
+        "actions": {}
+    },
+    "maman": {
+        "key": "maman",
+        "id": "1",
+        "displayName": "la maman",
+        "actions": {}
+    },
+    "mouse": {
+        "key": "mouse",
+        "id": "2",
+        "displayName": "la/les souris",
+        "actions": {}
+    }
+}

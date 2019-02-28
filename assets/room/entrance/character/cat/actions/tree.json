@@ -1,0 +1,20 @@
+{
+    "affraid": {
+        "key": "affraid",
+        "id": "0",
+        "displayName": "est surpris",
+        "filename": "affraid.png"
+    },
+    "down": {
+        "key": "down",
+        "id": "1",
+        "displayName": "descend l'escalier",
+        "filename": "down.png"
+    },
+    "drunk": {
+        "key": "drunk",
+        "id": "2",
+        "displayName": "est ivre",
+        "filename": "drunk.png"
+    }
+}

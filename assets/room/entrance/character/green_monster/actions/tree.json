@@ -1,0 +1,14 @@
+{
+    "run": {
+        "key": "run",
+        "id": "0",
+        "displayName": "s'enfui",
+        "filename": "run.png"
+    },
+    "slide": {
+        "key": "slide",
+        "id": "1",
+        "displayName": "glisse dans l'escalier",
+        "filename": "slide.png"
+    }
+}

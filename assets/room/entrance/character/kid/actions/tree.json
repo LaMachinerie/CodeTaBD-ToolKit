@@ -1,0 +1,20 @@
+{
+    "climb": {
+        "key": "climb",
+        "id": "0",
+        "displayName": "monte l'escalier",
+        "filename": "climb.png"
+    },
+    "enter": {
+        "key": "enter",
+        "id": "1",
+        "displayName": "entre par la porte",
+        "filename": "enter.png"
+    },
+    "go_out": {
+        "key": "go_out",
+        "id": "2",
+        "displayName": "sort par la porte",
+        "filename": "go_out.png"
+    }
+}

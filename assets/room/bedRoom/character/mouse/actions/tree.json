@@ -1,0 +1,32 @@
+{
+    "chill": {
+        "key": "chill",
+        "id": "0",
+        "displayName": "se regroupe",
+        "filename": "chill.png"
+    },
+    "eat": {
+        "key": "eat",
+        "id": "1",
+        "displayName": "mangent leur butin",
+        "filename": "eat.png"
+    },
+    "plan": {
+        "key": "plan",
+        "id": "2",
+        "displayName": "étudie la tapette",
+        "filename": "plan.png"
+    },
+    "run": {
+        "key": "run",
+        "id": "3",
+        "displayName": "court",
+        "filename": "run.png"
+    },
+    "steal": {
+        "key": "steal",
+        "id": "4",
+        "displayName": "volent le fromage",
+        "filename": "steal.png"
+    }
+}
