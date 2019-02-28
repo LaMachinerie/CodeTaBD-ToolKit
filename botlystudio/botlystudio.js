@@ -139,34 +139,52 @@ BotlyStudio.bindSpriteAddModals = function(){
     var type = document.getElementById("object_type").value
     var filepath = document.getElementById("sprite_filename").innerHTML;
     var blockText = document.getElementById("block_text").value;
+    var keyText = document.getElementById("key_text").value;
     var parentRoom;
     var parentCharacter;
     switch(type){
       case "room":
-        if(filepath.length > 0 && blockText.value.length > 0){
-          ElectronIPC.addNewRoom(filepath,blockText)
+        if( filepath != undefined        && 
+            filepath  != ""               && 
+            filepath  != "Aucun fichier"  && 
+            blockText != undefined        && 
+            blockText != ""){
+          ElectronIPC.addNewRoom(filepath, blockText, keyText)
           return false;
-        }else console.log("nope");
+        }
         break;
       case "object":
         parentRoom = document.getElementById("parent_room").value
-        if(filepath.length > 0 && blockText.value.length > 0 && parentRoom.length > 0){
-          ElectronIPC.addNewObject(filepath, parentRoom,blockText);
+        if( filepath    != undefined        && 
+            filepath    != ""               && 
+            filepath    != "Aucun fichier"  && 
+            blockText   != undefined        && 
+            blockText   != ""               && 
+            parentRoom  != undefined){
+          ElectronIPC.addNewObject(filepath, blockText, keyText, parentRoom);
           return false;
         }
         break;
       case "character":
         parentRoom = document.getElementById("parent_room").value
-        if(blockText.value.length > 0 && parentRoom.length > 0){
-          ElectronIPC.addNewObject(parentRoom,blockText);
+        if( blockText   != undefined  && 
+            blockText   != ""         &&  
+            parentRoom  != undefined){
+          ElectronIPC.addNewCharacter(blockText, keyText, parentRoom);
           return false;
         }
         break;
       case "action":
         parentRoom = document.getElementById("parent_room").value
         parentCharacter = document.getElementById("parent_character").value
-        if(filepath.length > 0 && blockText.value.length > 0 && parentRoom.length > 0 && parentCharacter.length > 0){
-          ElectronIPC.addNewObject(filepath, parentRoom, parentCharacter, blockText);
+        if(   filepath    != undefined        && 
+              filepath    != ""               && 
+              filepath    != "Aucun fichier"  && 
+              blockText   != undefined        && 
+              blockText   != ""               && 
+              parentRoom  != undefined        && 
+              parentCharacter != undefined){
+          ElectronIPC.addNewAction(filepath, blockText, keytext, parentRoom, parentCharacter);
           return false;
         }
         break;
@@ -458,7 +476,7 @@ BotlyStudio.devTools = function () {
 
 BotlyStudio.addSpriteDialog = function () {
   $('#sprite_dialog').openModal({
-    dismissible: true,
+    dismissible: false,
     opacity: .5,
     in_duration: 200,
     out_duration: 250

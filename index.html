@@ -325,10 +325,21 @@
               <option value="">Selectionner le personnage qui effectue l'action</option>
           </select>
       </div>
+      <div class="modal_section" style="display: none">
+        <label> <span class="translatable_bloc_type">Jour ou nuit</span>:</label>
+        <select name="day_night" id="day_type">
+            <option value="true">Jour</option>
+            <option value="false">Nuit</option>
+        </select>
+    </div>
       <div class="modal_section">
           <label><span class="translatable_block_display">Texte du bloc</span>:</label>
           <input type="text" id="block_text">
       </div>
+      <div class="modal_section">
+        <label><span class="translatable_block_display">Clé du bloc</span>:</label>
+        <input type="text" id="key_text">
+    </div>
       </div>
       <div class="modal-footer">
         <a href="#" class="waves-effect btn-flat modal-close">

@@ -126,6 +126,66 @@ function initIpc() {
     }
     //event.sender.send('import-asset-response', "{}");
   });
+
+  ipc.on('add-room', function(path, text, newKey, day){
+    var tree = jsonManager.readJson('assets/tree.json');
+    if(tree.room[newKey] = undefined){
+      fs.mkdirSync(assetPath + '/room/' + newKey);
+      fs.copyFileSync(path, assetPath + '/room/' + newKey + "_" + (day) ? "day" : "night" + ".png")
+
+      var id = 1;
+      for(room in tree.room){
+        id++;
+      }
+
+      dayJson = {};
+      nightJson = {};
+
+      if(day){
+        dayJson = {
+          "key" : "day",
+          "id" : "0",
+          "displayName": "jour",
+          "filename": newKey + "_day.png"
+        }
+      }else{
+        nightJson = {
+          "key" : "night",
+          "id" : "1",
+          "displayName": "nuit",
+          "filename": newKey + "_night.png"
+        }
+      }
+
+      tree.room[newKey] = {
+        "key": newKey,
+        "id" : id,
+        "displayName" : text,
+        "character" : {},
+        "background" : {
+          "day" : dayJson,
+          "night" : nightJson
+        }
+      }
+
+      jsonManager.saveJson('assets/tree.json' ,tree);
+    }else{
+      
+    }
+  });
+  
+  ipc.on('add-object', function(path, text, newkey, roomKey){
+
+  });
+
+  ipc.on('add-character', function(text, newkey, roomKey){
+
+  });
+
+  ipc.on('add-action', function(path, text, newkey, roomKey, characterKey){
+
+  });
+
 }
 
 /***********************

@@ -70,6 +70,43 @@ ElectronIPC.importImage = function (path) {
   ipc.send('import-image', path);
 };
 
+
+
+ElectronIPC.addNewRoom = function (path, text, newKey) {
+  ipc.send('add-room', path, text, newKey, day);
+};
+
+ElectronIPC.addNewObject= function (path, text, newKey, roomKey) {
+  ipc.send('add-object', path, text, newKey, roomKey);
+};
+
+ElectronIPC.addNewCharacter = function (text, newKey, roomKey) {
+  ipc.send('add-character', text, newKey, roomKey);
+};
+
+ElectronIPC.addNewAction = function (path, text, newKey, roomKey, characterKey) {
+  ipc.send('add-action', path, text, newKey, roomKey, characterKey);
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ElectronIPC.createElementFromJson = function (json_data) {
   var parsed_json = JSON.parse(json_data);
   var element = null;
