@@ -13,9 +13,10 @@ var DecompressZip = require('decompress-zip');
 const ipc = electron.ipcMain;
 
 const root = app.getAppPath();
-const assetPath = app.getAppPath() + "/assets"
-const tmpPath = app.getAppPath() + "\\tmp";
-const assetBackup = app.getAppPath() + "\\backup";
+const assetPath = root + "\\assets"
+const tmpPath = root + "\\tmp";
+const assetBackup = root + "\\backup";
+const treePath = assetPath + "\\tree.json"
 
 var fs = require('fs');
 
@@ -55,9 +56,14 @@ app.on('activate', function () {
 })
 
 function initIpc() {
-  ipc.on('get-json', function (event, path, flag, keyA, keyB) {
+  ipc.on('get-json', function (event, path) {
     jsonResponse = jsonManager.readJson(path);
-    event.sender.send('get-json-response', JSON.stringify(jsonResponse), flag, keyA, keyB);
+    event.sender.send('get-json-response', JSON.stringify(jsonResponse));
+  });
+
+  ipc.on('get-json-tree', function (event) {
+    jsonResponse = jsonManager.readJson(treePath);
+    event.sender.send('get-json-tree-response', JSON.stringify(jsonResponse));
   });
 
   ipc.on('add-json-element', function (path, jsonElement) {
@@ -199,7 +205,7 @@ var jsonManager = {};
 
 jsonManager.readJson = function (path) {
   var content = null;
-  spath = root + '/' + path;
+  spath = path;
   try {
     content = fs.readFileSync(spath, 'utf-8')
   } catch (error) {
@@ -212,7 +218,7 @@ jsonManager.readJson = function (path) {
 
 
 jsonManager.saveJson = function (path, json) {
-  spath = root + '/' + path;
+  spath = path;
   try {
     fs.writeFile(spath, JSON.stringify(json), (err) => {
       if (err) throw err;

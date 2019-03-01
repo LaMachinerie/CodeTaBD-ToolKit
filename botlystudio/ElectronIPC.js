@@ -9,37 +9,16 @@ const electron = require('electron');
 const ipc = electron.ipcRenderer;
 
 
-ElectronIPC.pendingRequest = 0;
-
 ElectronIPC.initIPC = function () {
-  ipc.on('get-json-response', function (event, json_str, flag, roomKey, characterKey) {
-    ElectronIPC.pendingRequest --;
+  ipc.on('get-json-tree-response', function (event, json_str) {
     var json = JSON.parse(json_str);
     if (json != null) {
-      switch (flag) {
-        case 'root':
-          SpriteManager.processRootJson(json);
-          break;
-        case 'room':
-          SpriteManager.processRoomJson(json, roomKey);
-          break;
-        case 'character':
-          SpriteManager.processCharacterJson(json, roomKey);
-          break;
-        case 'background':
-          SpriteManager.processBackgroundJson(json, roomKey);
-          break;
-        case 'actions':
-          SpriteManager.processActionsJson(json, roomKey, characterKey);
-          break;
-        default :
-          console.log("Unknown flag : " + flag);
-      }
+      SpriteManager.Tree = json;
     }
-    if(ElectronIPC.pendingRequest <= 0){
-      ElectronIPC.pendingRequest = 0;
-      SpriteManager.saveTree();
-    }
+  });
+
+  ipc.on('get-json-response', function (event) {
+    //var json = JSON.parse(json_str);
   });
 
   ipc.on('import-image-response', function (event, filepath) {
@@ -53,13 +32,12 @@ ElectronIPC.initIPC = function () {
 
 
 
-ElectronIPC.getJson = function (path, flag, keyA, keyB) {
-  ipc.send('get-json', path, flag, keyA, keyB);
-  ElectronIPC.pendingRequest ++;
+ElectronIPC.getJsonTree = function () {
+  ipc.send('get-json-tree');
 };
 
-ElectronIPC.addJsonElement = function (path, jsonElement) {
-  ipc.send('add-json-element', path, flag, keyA, keyB);
+ElectronIPC.getJson = function (path) {
+  ipc.send('get-json', path );
 };
 
 ElectronIPC.importAsset = function (path) {
